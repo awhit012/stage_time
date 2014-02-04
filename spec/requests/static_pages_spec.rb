@@ -2,30 +2,21 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content 'Stage Time'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('stage time')
-    end
-
-    it "should have the title 'Home'" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
-    end
+    it { should have_content('Stage Time') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
   end
 
-	describe "About page" do
+  describe "About page" do
+    before { visit about_path }
 
-    it "should have the content 'About Us'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About Us')
-    end
-
-    it "should have the title 'About Us'" do
-      visit '/static_pages/about'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
-    end
+    it { should have_content('About') }
+    it { should have_title(full_title('About Us')) }
   end
 end
   
