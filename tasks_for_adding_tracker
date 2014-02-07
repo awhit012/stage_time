@@ -1,0 +1,17 @@
+As a logged in user:
+I want to enter Stage Time in minutes
+And SAVE minutes.
+
+
+User must have attribute: Stage Time to date.
+
+Show.html.erb must have form for entering time
+
+1. Creat tests:
+	User profile page has content: "enter stage time"
+	User should have attribute: Stage Time
+	If User saves content, should add to database
+
+2. Add form to show.html.erb
+
+3. Add 

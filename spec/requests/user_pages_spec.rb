@@ -58,6 +58,7 @@ describe "User pages" do
 
     it { should have_content(user.name) }
     it { should have_title(user.name) }
+    it { should have_content( "Enter stage time")}
   end
 
   describe "signup page" do

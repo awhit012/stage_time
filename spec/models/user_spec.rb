@@ -16,6 +16,7 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
+  it { should respond_to(:stagetime)}
 
   it { should be_valid }
   it { should_not be_admin }
@@ -112,6 +113,20 @@ describe User do
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
+
+  describe "stagetime associations" do
+    before { @user.save }
+    its(:stagetime) {should be_updated }
+    
+    it "should destroy associated stagetime" do
+      stagetime = @user.stagetime.to_a
+      @user.destroy
+      expect(stagetime).not_to be_empty
+      stagetime do |stagetime|
+        expect(StageTime.where(id: stagetime.id)).to be_empty
+      end
+    end
   end
 end
 
