@@ -7,11 +7,14 @@ User must have attribute: Stage Time to date.
 
 Show.html.erb must have form for entering time
 
-1. Creat tests:
+1. Create tests:
 	User profile page has content: "enter stage time"
 	User should have attribute: Stage Time
-	If User saves content, should add to database
+	Adding time should update attr Stage Time by adding new time to total
 
 2. Add form to show.html.erb
 
-3. Add 
+3. Add User attribute Stage Time
+
+4. submit button => StageTime += Stagetime
+

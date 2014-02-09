@@ -46,6 +46,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  margin-left: 10px;
 }
 
 h2 {
@@ -183,3 +184,19 @@ input {
     }
   }
 }
+
+.track {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.resume {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: left;
+
+  h4 {
+    tect-align: center;
+  }
+}
+

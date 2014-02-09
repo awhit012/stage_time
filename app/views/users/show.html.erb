@@ -5,11 +5,12 @@
       <h1>
         <%= @user.name %>
       </h1>
-      <div> Enter stage time today in minutes: </div>
-      <div class="span4">
-    <%= form_for(:stagetime, url: root_path) do |f| %>
-      <%= f.text_field :stagetime %>
-      <%= f.submit "Log Stage Time", class: "btn btn-medium btn-primary" %>
+      <br>
+      <div class="track"> Enter stage time today in minutes: <br>
+        <%= form_for(:stagetime) do |f| %>
+        <%= f.text_field :stagetime %>
+        <%= f.submit "Log", class: "btn btn-medium btn-primary" %>
+      </div>
     <% end %>
     </section>
   </aside>

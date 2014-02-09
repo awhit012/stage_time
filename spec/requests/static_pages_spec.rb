@@ -18,5 +18,12 @@ subject { page }
     it { should have_content('About') }
     it { should have_title(full_title('About Us')) }
   end
+
+  describe "Resume" do
+    before { visit resume_path }
+
+    it { should have_content('Resume') }
+    it { should have_title(full_title('Resume')) }
+  end
 end
   
